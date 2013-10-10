@@ -32,8 +32,14 @@ union() {
 		rotate(a=[0, 0, z*36+18]) {
 			for (i=[0 : 3]) {
 				if (z>1) {
-					translate([1.6*(12-(35*i+17.5)/20), 0, 5*i+2.5])
-						sphere(r=2);
+					translate([
+						sqrt(
+							pow(1.6*13*cos((36*z)+18), 2) + pow(13*sin((z*36)+18), 2)
+						),
+						0,
+						5*i+2.5]) sphere(r=2);
+//					translate([1.6*(12-(35*i+17.5)/20), 0, 5*i+2.5])
+//						sphere(r=2);
 				} else {
 					translate([12-(35*i+17.5)/20, 0, 5*i+2.5]) 
 						sphere(r=2);
