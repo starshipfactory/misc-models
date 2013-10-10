@@ -21,31 +21,31 @@ module kopf() {
 	translate([0, 0, 25]) sphere(r=6, $fn=10);
 }
 
+module knoepfe() {
+	// Dalek-Knöpfe
+	for (z=[-2 : 7]) { // 10 rund herum
+			for (i=[0 : 3]) { // 4 ebenen in z-richtung
+				if (z>1) { // die vorderen 4 knoepfe
+					// 7/20*(5*i+2.5) ist die verjuengung nach oben gesehen
+					// 13 der max. radius vom koerper
+					// 1.6 ist der streckungsfaktor
+					translate([
+						1.6*(13-7/20*(5*i+2.5))*cos((z*36+18)),
+						(13-7/20*(5*i+2.5))*sin((z*36+18)),
+						5*i+2.5]) sphere(r=2); // cube(a=2,center=true);
+				} else { // die hinteren knoepfe
+					translate([
+						(13-7/20*(5*i+2.5))*cos((z*36+18)),
+						(13-7/20*(5*i+2.5))*sin((z*36+18)),
+						5*i+2.5]) sphere(r=2); // cube(a=2,center=true);
+				}
+			}
+	}
+}
+
 union() {
 	koerper();
 	hals();
 	kopf();
-
-
-	// Dalek-Knöpfe
-	for (z=[-2 : 7]) {
-		rotate(a=[0, 0, z*36+18]) {
-			for (i=[0 : 3]) {
-				if (z>1) {
-					translate([
-						sqrt(
-							pow(1.6*13*cos((36*z)+18), 2) + pow(13*sin((z*36)+18), 2)
-						),
-						0,
-						5*i+2.5]) sphere(r=2);
-//					translate([1.6*(12-(35*i+17.5)/20), 0, 5*i+2.5])
-//						sphere(r=2);
-				} else {
-					translate([12-(35*i+17.5)/20, 0, 5*i+2.5]) 
-						sphere(r=2);
-				}
-			}
-		}
-	}
-
+	knoepfe();
 }
