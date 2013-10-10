@@ -25,7 +25,7 @@ module knoepfe() {
 	// Dalek-Knöpfe
 	for (z=[-2 : 7]) { // 10 rund herum
 			for (i=[0 : 3]) { // 4 ebenen in z-richtung
-				if (z>1) { // die vorderen 4 knoepfe
+				if (z>1) { // die vorderen 6 knoepfe
 					// 7/20*(5*i+2.5) ist die verjuengung nach oben gesehen
 					// 13 der max. radius vom koerper
 					// 1.6 ist der streckungsfaktor
@@ -33,7 +33,7 @@ module knoepfe() {
 						1.6*(13-7/20*(5*i+2.5))*cos((z*36+18)),
 						(13-7/20*(5*i+2.5))*sin((z*36+18)),
 						5*i+2.5]) sphere(r=2); // cube(a=2,center=true);
-				} else { // die hinteren knoepfe
+				} else { // die hinteren 4 knoepfe
 					translate([
 						(13-7/20*(5*i+2.5))*cos((z*36+18)),
 						(13-7/20*(5*i+2.5))*sin((z*36+18)),
