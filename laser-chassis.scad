@@ -1,6 +1,6 @@
-chassis_height = 600;
-chassis_length = 1300;
-chassis_width = 2300;
+chassis_height = 1000;
+chassis_length = 1500;
+chassis_width = 2500;
 
 // The laser tube.
 // TODO: How will it be attached?
