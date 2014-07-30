@@ -22,11 +22,20 @@ translate([-chassis_width/2+100, 100, chassis_height-210])
 		cylinder(h=5, r=10);
 
 // Left chassis motor for moving the laser forward and backward.
-// TODO: Add this.
-
+translate([-chassis_width/2+25, -chassis_length+260, chassis_height-60]) {
+	translate([0, 0, 50])
+		cube([100, chassis_length-350, 5]);
+	translate([0, 0, -50])
+		cube([100, chassis_length-350, 5]);
+	translate([0, chassis_length-350, 0])
+		rotate([90, 0, 90])
+			cylinder(h=100, r=50);
+	rotate([90, 0, 90])
+		cylinder(h=100, r=50);
+}
 
 // Rubber band for making the engine go left/right.
-translate([-chassis_width/2+100, -2*chassis_length/3+205, chassis_height-150]) {
+translate([-chassis_width/2+100, -2*chassis_length/3+205, chassis_height-200]) {
 	union() {
 		cube([chassis_width-200, 100, 5]);
 		translate([0, 0, 100]) cube([chassis_width-200, 100, 5]);
@@ -40,7 +49,7 @@ translate([-chassis_width/2+100, -2*chassis_length/3+205, chassis_height-150]) {
 }
 
 // Transporter mount for the mirror transport band.
-translate([-chassis_width/2+25, -2*chassis_length/3+95, chassis_height-150]) {
+translate([-chassis_width/2+25, -2*chassis_length/3+95, chassis_height-200]) {
 	cube([chassis_width-50, 100, 100]);
 }
 
