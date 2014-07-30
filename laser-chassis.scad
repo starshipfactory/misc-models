@@ -4,20 +4,20 @@ chassis_width = 2500;
 
 // The laser tube.
 // TODO: How will it be attached?
-translate([-900, 100, chassis_height - 80])
+translate([-900, 100, chassis_height - 200])
 	rotate([0, 90, 0]) color(0.8, 0.8, 0.8, 1.0) {
 		difference() {
-			cylinder(h=2000, r=40);
+			cylinder(h=2000, r=80);
 
 			difference() {
-				translate([0, 0, -1]) cylinder(h=81, r=42);
-				cylinder(h=84, r1=0, r2=40);
+				translate([0, 0, -1]) cylinder(h=81, r=82);
+				cylinder(h=84, r1=0, r2=80);
 			}
 		}
 	}
 
 // Backside mirror.
-translate([-chassis_width/2+100, 100, chassis_height-80])
+translate([-chassis_width/2+100, 100, chassis_height-210])
 	rotate([90, 0, 45])
 		cylinder(h=5, r=10);
 
@@ -47,7 +47,7 @@ union() {
 	color([1, 1, 1, 0.5]) difference() {
 		translate([-chassis_width/2, 0, 0])
 			%cube([chassis_width, 10, chassis_height]);
-		translate([-chassis_width/2, -2, chassis_height-200])
+		translate([-chassis_width/2, -2, chassis_height-300])
 			%cube([201, 14, 201]);
 	}
 
