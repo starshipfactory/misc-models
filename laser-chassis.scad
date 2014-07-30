@@ -49,8 +49,22 @@ translate([-chassis_width/2+100, -2*chassis_length/3+205, chassis_height-200]) {
 }
 
 // Transporter mount for the mirror transport band.
-translate([-chassis_width/2+25, -2*chassis_length/3+95, chassis_height-200]) {
-	cube([chassis_width-50, 100, 100]);
+translate([-chassis_width/2+25, -2*chassis_length/3+95, chassis_height-300]) {
+	difference() {
+		%cube([chassis_width-50, 100, 200]);
+		translate([0, 0, 50])
+			cube([chassis_width-50, 10, 10]);
+		translate([0, 100, 50])
+			cube([chassis_width-50, 10, 10]);
+		translate([0, 0, 150])
+			cube([chassis_width-50, 10, 10]);
+		translate([0, 100, 150])
+			cube([chassis_width-50, 10, 10]);
+		translate([0, 50, 0])
+			cube([chassis_width-50, 10, 10]);
+		translate([0, 50, 200])
+			cube([chassis_width-50, 10, 10]);
+	}
 }
 
 // The chassis itself.
