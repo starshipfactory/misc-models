@@ -37,8 +37,11 @@ translate([-chassis_width/2+100, -2*chassis_length/3+205, chassis_height-150]) {
 			rotate([90, 0, 0])
 				cylinder(h=100, r=50);
 	}
+}
 
-	
+// Transporter mount for the mirror transport band.
+translate([-chassis_width/2+25, -2*chassis_length/3+95, chassis_height-150]) {
+	cube([chassis_width-50, 100, 100]);
 }
 
 // The chassis itself.
@@ -75,9 +78,4 @@ union() {
 	// Front plate.
 	color([1, 1, 1, 0.3]) translate([-chassis_width/2, -chassis_length+205, 0])
 		%cube([chassis_width, 10, chassis_height]);
-
-	// Mirror holding layer on the left.
-	color([1, 1, 1, 0.5])
-		translate([-chassis_width/2, -chassis_length+205, chassis_height-200])
-			cube([200, chassis_length-200, 10]);
 }
