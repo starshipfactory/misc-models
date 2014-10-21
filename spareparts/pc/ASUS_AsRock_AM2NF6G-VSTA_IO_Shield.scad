@@ -2,10 +2,10 @@
 difference() {
 	union() {
 		// Default ATX blinds are 160x45mm
-		cube([160, 45, 1.25]);
+		cube([160, 45, 1.5]);
 
 		translate([-0.5, -0.5, 0])
-			cube([161, 46, 0.5]);
+			cube([162, 47, 0.75]);
 	}
 
 	// PS/2 ports are about 9.5mm in diameter.
