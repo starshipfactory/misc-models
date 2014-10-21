@@ -18,13 +18,13 @@ difference() {
 		cylinder(h = 4, r = 4.75, center=false);
 
 	// Parallel port.
-	translate([22.3, 20, -0.1])
+	translate([22.3, 25, -0.1])
 		cube([43.2, 10.7, 4]);
 
 	hull() {
-		translate([19.3, 25.7, -0.1])
+		translate([19.5, 30.7, -0.1])
 			cylinder(h = 4, r = 3.2, center=false);
-		translate([69.5, 25.7, -0.1])
+		translate([68.5, 30.7, -0.1])
 			cylinder(h = 4, r = 3.2, center=false);
 	}
 
