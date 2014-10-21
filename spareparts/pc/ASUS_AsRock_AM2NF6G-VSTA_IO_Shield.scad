@@ -11,11 +11,11 @@ difference() {
 	// PS/2 ports are about 9.5mm in diameter.
 	// Mouse port.
 	translate([15.6, 10.7, -0.1])
-		cylinder(h = 4, r = 4.75, center=false);
+		cylinder(h = 4, r = 5.2, center=false);
 
 	// Keyboard port.
 	translate([32.75, 10.7, -0.1])
-		cylinder(h = 4, r = 4.75, center=false);
+		cylinder(h = 4, r = 5.2, center=false);
 
 	// Parallel port.
 	translate([22.3, 25, -0.1])
@@ -40,8 +40,8 @@ difference() {
 		cube([20.84, 10.36, 4]);
 
 	// First line of USB ports.
-	translate([83.7, 4.3, -0.1])
-		cube([14.9, 14.9, 4]);
+	translate([83.5, 4.3, -0.1])
+		cube([15, 17, 4]);
 
 	// Network and USB ports.
 	translate([104.2, 4.3, -0.1])
