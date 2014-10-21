@@ -41,7 +41,7 @@ difference() {
 
 	// First line of USB ports.
 	translate([83.7, 4.3, -0.1])
-		cube([14.9, 14.3, 4]);
+		cube([14.9, 14.9, 4]);
 
 	// Network and USB ports.
 	translate([104.2, 4.3, -0.1])
