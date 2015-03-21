@@ -11,6 +11,8 @@ union() {
 			}
 		
 			cylinder(h=15, r=6);
+
+			cylinder(h=3, r=10);
 		}
 	}
 	
@@ -26,6 +28,8 @@ union() {
 			}
 		
 			cylinder(h=15, r=6);
+
+			cylinder(h=3, r=10);
 		}
 	}
 
